@@ -1,6 +1,7 @@
 import { galleryItems } from "./gallery-items.js";
 console.log(galleryItems);
 
+// Refs
 const galleryRef = document.querySelector(".gallery");
 const markup = galleryItems
   .map(({ original, preview, description }) => {
@@ -9,7 +10,6 @@ const markup = galleryItems
 </a>`;
   })
   .join("");
-console.dir(markup);
 galleryRef.insertAdjacentHTML("beforeend", markup);
 
 let lightbox = new SimpleLightbox(".gallery a", {
